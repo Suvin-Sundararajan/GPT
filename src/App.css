@@ -1,0 +1,36 @@
+.main-content {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  flex: 1;
+  overflow-y: auto;
+  background-color: #f1f1f1;
+}
+
+.chat-card {
+  flex: 6; /* Adjusted to take remaining space */
+  display: flex;
+  flex-direction: column;
+  height: 95vh; /* Set a fixed viewport height minus any desired margins */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  background-color: white;
+  overflow: hidden; /* Ensures no overflow from this component */
+}
+
+.menu-card {
+  flex: 1; /* Adjusted to take up 1/5 of the width */
+  display: flex;
+  flex-direction: column;
+  height: 95vh; /* Set a fixed viewport height minus any desired margins */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  background-color: white;
+  overflow: hidden; /* Ensures no overflow from this component */
+}

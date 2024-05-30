@@ -1,0 +1,135 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden; /* Prevent scrolling of the main webpage */
+}
+
+.chat-card {
+    display: flex;
+    flex-direction: column;
+    height: 80vh; /* Set a fixed viewport height minus any desired margins */
+    width: 100%; /* Take full width of its parent */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+    background-color: white;
+    overflow: hidden; /* Ensures no overflow from this component */
+}
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* This should take up all space of its parent */
+    overflow: hidden; /* Adjust or remove if not necessary */
+}
+
+.messages {
+    flex: 1; /* This will make it take all available space */
+    overflow-y: auto; /* Enables scrolling within the messages area */
+    padding: 10px;
+}
+
+.message {
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 10px; /* Rounded corners for messages */
+    border: 1px solid #ddd; /* Subtle border for some depth */
+    max-width: 100%; /* Messages use only 80% of the width */
+}
+
+.message.user {
+    text-align: right;
+    background-color: #e7f5ff; /* Light blue background for user messages */
+    border-color: #b0c4de; /* Light blue border */
+    margin-left: auto; /* Align to right */
+    display: inline-block;
+    max-width: 100%; /* Limit the width to 80% of the container */
+    word-wrap: break-word; /* Ensure long words break correctly */
+    padding: 10px;
+    border-radius: 10px; /* Rounded corners for messages */
+}
+
+.message.bot {
+    text-align: left;
+    background-color: #f0f0f0; /* Light gray background for bot messages */
+    border-color: #ccc; /* Gray border */
+}
+
+.message.loading {
+    text-align: center; /* Center align the loading dots */
+    background: none; /* No background for loading message */
+    border: none; /* No border for loading message */
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #f1f1f1;
+    position: sticky;
+    bottom: 0;
+    border-radius: 30px;
+    width: calc(100% - 40px); /* Ensure full width with padding taken into account */
+    margin: 0 20px; /* Add margin to ensure the border radius is visible */
+}
+
+.input-container input {
+    flex: 1;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+}
+
+.input-container button:last-child {
+    margin-right: 20px; /* Add space to the right of the last button */
+}
+
+.input-container button:hover {
+    background-color: #555; /* Darker background on hover */
+}
+
+.input-container button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 7px; /* Add space to the right of each button */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.input-container button .icon {
+    margin-right: 0px;
+}
+
+.loading-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.loading-dot {
+    width: 8px;
+    height: 8px;
+    margin: 0 3px;
+    background-color: #333;
+    border-radius: 50%;
+    animation: loading 0.6s infinite alternate;
+}
+
+@keyframes loading {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.3;
+    }
+}

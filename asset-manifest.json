@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/GPT/static/css/main.b77ad8e3.css",
-    "main.js": "/GPT/static/js/main.7b7795f4.js",
+    "main.css": "/GPT/static/css/main.f4a2278e.css",
+    "main.js": "/GPT/static/js/main.8a901c9d.js",
     "static/js/453.ad6eb26e.chunk.js": "/GPT/static/js/453.ad6eb26e.chunk.js",
     "static/media/harvard.png": "/GPT/static/media/harvard.6dfd4f65ce523211d9c0.png",
     "static/media/KaTeX_AMS-Regular.ttf": "/GPT/static/media/KaTeX_AMS-Regular.853be92419a6c3766b9a.ttf",
@@ -65,12 +65,12 @@
     "static/media/KaTeX_Size3-Regular.woff": "/GPT/static/media/KaTeX_Size3-Regular.7947224e8a9914fa332b.woff",
     "static/media/KaTeX_Size3-Regular.woff2": "/GPT/static/media/KaTeX_Size3-Regular.e1951519f6f0596f7356.woff2",
     "index.html": "/GPT/index.html",
-    "main.b77ad8e3.css.map": "/GPT/static/css/main.b77ad8e3.css.map",
-    "main.7b7795f4.js.map": "/GPT/static/js/main.7b7795f4.js.map",
+    "main.f4a2278e.css.map": "/GPT/static/css/main.f4a2278e.css.map",
+    "main.8a901c9d.js.map": "/GPT/static/js/main.8a901c9d.js.map",
     "453.ad6eb26e.chunk.js.map": "/GPT/static/js/453.ad6eb26e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b77ad8e3.css",
-    "static/js/main.7b7795f4.js"
+    "static/css/main.f4a2278e.css",
+    "static/js/main.8a901c9d.js"
   ]
 }

@@ -1,0 +1,151 @@
+.chat-card {
+    flex: 6;
+    display: flex;
+    flex-direction: column;
+    height: 95vh;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    background-color: white;
+    overflow: hidden;
+  }
+  
+  .chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+  }
+  
+  .message {
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .message.user {
+    text-align: right;
+    background-color: #e7f5ff;
+    border-color: #b0c4de;
+    margin-left: auto;
+    display: inline-block;
+    word-wrap: break-word;
+  }
+  
+  .message.bot {
+    text-align: left;
+    background-color: #f0f0f0;
+    border-color: #ccc;
+  }
+  
+  .message.loading {
+    text-align: center;
+    background: none;
+    border: none;
+  }
+  
+  .message-checkbox {
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  .input-container {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #f1f1f1;
+    position: sticky;
+    bottom: 0;
+    border-radius: 30px;
+    width: calc(100% - 40px);
+    margin: 0 20px;
+  }
+  
+  .input-container input {
+    flex: 1;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+  }
+  
+  .input-container button:last-child {
+    margin-right: 20px;
+  }
+  
+  .input-container button:hover {
+    background-color: #555;
+  }
+  
+  .input-container button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 7px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .input-container button .icon {
+    margin-right: 0;
+  }
+  
+  .loading-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+  }
+  
+  .loading-dot {
+    width: 8px;
+    height: 8px;
+    margin: 0 3px;
+    background-color: #333;
+    border-radius: 50%;
+    animation: loading 0.6s infinite alternate;
+  }
+  
+  @keyframes loading {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.3;
+    }
+  }
+  
+  .pdf-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+  
+  .pdf-icon {
+    width: 20px; /* Adjust size to match other icons */
+    height: 20px; /* Adjust size to match other icons */
+  }
+  
+  .pdf-button.active {
+    background-color: #555;
+    color: white;
+  }
+  

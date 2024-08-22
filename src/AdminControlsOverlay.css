@@ -1,0 +1,119 @@
+.overlay-admin-card {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Ensure it covers the full width */
+    height: 100%; /* Ensure it covers the full height */
+    background-color: rgba(0, 0, 0, 0.7); /* Maintain the greyish transparent background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.overlay-admin-content {
+    position: relative;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%; /* Adjusted width */
+    max-width: 1200px; /* Set a maximum width for the content */
+    height: 90%; /* Adjusted height */
+    max-height: 90%; /* Set a maximum height */
+    overflow-y: auto;
+    z-index: 1100;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for better visual separation */
+    padding-bottom: 80px; /* Ensure content doesn't overlap the buttons */
+}
+
+.close-button {
+    position: fixed; /* Make the close button fixed */
+    top: 10px;
+    right: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    z-index: 1300; /* Highest z-index to ensure it stays on top */
+}
+
+.box-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.box {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.dropdown-container {
+    display: flex;
+    gap: 10px;
+}
+
+.dropdown {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.email-button {
+    display: inline-block;
+    padding: 10px;
+    background-color: #3B82F6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.custom-function-button {
+    display: inline-block;
+    padding: 10px;
+    background-color: #34D399;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.navigation-buttons {
+    position: fixed; /* Fix the buttons at the bottom */
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+    z-index: 1200; /* Higher z-index so they stay visible */
+}
+
+.navigation-button {
+    background-color: #3B82F6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    flex: 1;
+    margin: 0 10px; /* Space between buttons */
+    text-align: center;
+}
+
+.navigation-button:disabled {
+    background-color: #B0BEC5;
+    cursor: not-allowed;
+}
+
+.navigation-button:hover:not(:disabled) {
+    background-color: #2563EB;
+}

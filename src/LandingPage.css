@@ -1,0 +1,155 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.landing-page {
+  text-align: center;
+  background-color: #f1f1f1;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #a51c30;
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+.top-bar nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+}
+
+.top-bar nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  margin-top: 80px; /* Adjust margin for top space */
+}
+
+.card {
+  border: 1px solid black;
+  border-radius: 20px; /* Round the corners */
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%; /* Increase card width */
+  max-width: 800px; /* Set maximum width for the card */
+}
+
+.card-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  margin-right: 20px; /* Add margin to separate from video section */
+}
+
+.logo {
+  width: 100px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* Ensure higher specificity */
+.google-signin {
+  display: flex !important;
+  align-items: center !important;
+  background-color: white !important;
+  border: 1px solid black !important; /* Add a defined border */
+  border-radius: 20px !important; /* Curved border */
+  padding: 10px 20px !important;
+  margin-top: 20px !important;
+  cursor: pointer !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+  transition: background-color 0.3s, box-shadow 0.3s !important;
+}
+
+.google-signin img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px !important;
+}
+
+.google-signin:hover {
+  background-color: #f1f1f1 !important; /* Slightly darker background on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important; /* Slightly larger shadow on hover */
+}
+
+.video-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro-video {
+  width: 100%;
+  max-width: 400px; /* Keep the max width the same */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .card-content {
+    flex-direction: column;
+    align-items: center; /* Center align the items */
+  }
+
+  .logo {
+    order: -2; /* Move logo to the top */
+    margin-bottom: 20px;
+  }
+
+  .video-content {
+    order: -1; /* Move video content below logo */
+    margin-bottom: 20px; /* Add margin to separate from other content */
+  }
+
+  .text-content {
+    order: 0; /* Move text content below video content */
+    margin-right: 0;
+  }
+
+  .intro-video {
+    margin-left: 0;
+    max-width: 100%;
+  }
+}
+
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+  width: 100%;
+  text-align: center;
+}

@@ -1,15 +1,4 @@
-.menu-card {
-    display: flex;
-    flex-direction: column;
-    height: 100%; /* Adjusted to take full height of its parent */
-    width: 100%; /* Take full width of its parent */
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    box-sizing: border-box;
-    background-color: white;
-}
+
 
 .menu-card .logo-placeholder {
     display: flex;
@@ -20,11 +9,111 @@
 
 .menu-card .logo-placeholder img {
     max-width: 100%;
- 
+}
+
+.horizontal-bar {
+    width: 100%;
+    height: 2px;
+    background-color: #ccc;
+    margin: 10px 0;
+}
+
+.tab-content {
+    flex-grow: 1;
+}
+
+.tab-content h2 {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.centered {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.tab-content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.tab-content ul li {
+    padding: 5px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.setting-item {
+    margin-bottom: 10px;
+}
+
+.setting-item label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.course-item {
+    padding: 5px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 0.9em;
+}
+
+.course-item:hover {
+    background-color: #e0e0e0;
+}
+
+.course-item.selected {
+    background-color: #333;
+    color: white;
+}
+
+.course-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.add-course {
+    margin-top: 20px;
+}
+
+.add-course label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.tabs button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    flex-grow: 1;
+    margin: 0 5px;
+}
+
+.tabs button:hover {
+    background-color: #555;
+}
+
+.tabs button.active {
+    background-color: #000;
 }
 
 .status-box {
-    margin-bottom: 20px;
+    margin-top: 20px;
     font-size: 1.2em;
     padding: 10px;
     border-radius: 5px;
@@ -44,23 +133,83 @@
     border: 1px solid #f5c6cb;
 }
 
-.menu-card .settings {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    flex-grow: 1; /* Allow the settings section to grow and fill available space */
+.wide-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
 }
 
-.menu-card .settings button {
+.open-overlay-button {
     background-color: #333;
     color: white;
     border: none;
-    padding: 10px;
+    padding: 10px 20px;
     cursor: pointer;
     border-radius: 5px;
     transition: background-color 0.3s ease;
+    margin-top: 20px; /* Adjust margin as needed */
+  }
+  
+  .open-overlay-button:hover {
+    background-color: #555;
+  }
+
+  .card-button {
+    display: flex;
+    align-items: center;
+    border: 2px solid;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    background-color: white;
 }
 
-.menu-card .settings button:hover {
-    background-color: #555;
+  
+
+.menu-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 95vh; /* Keep the menu card height at 95% of the viewport */
+    width: 100%;
+    padding: 20px;
+    border: 3px solid transparent;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+    position: relative; /* Ensure absolute positioning within this component */
+}
+
+
+
+.status-box {
+    margin-top: 20px;
+    font-size: 1.2em;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.status-box.connected {
+    background-color: #d4edda; /* Light green background */
+    color: #155724;
+    border: 2px solid #28a745; /* Bright green border */
+}
+
+.status-box.disconnected {
+    background-color: #f8d7da; /* Light red background */
+    color: #721c24;
+    border: 2px solid #dc3545; /* Bright red border */
 }

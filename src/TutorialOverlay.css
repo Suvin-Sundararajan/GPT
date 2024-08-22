@@ -1,0 +1,133 @@
+.overlay-tutorial-card {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Greyish transparent background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.overlay-tutorial-content {
+    position: relative;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 60%;
+    max-width: 600px;
+    max-height: 80%;
+    overflow-y: auto;
+    z-index: 1100;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    z-index: 1200;
+}
+
+.close-button:hover {
+    background-color: #555;
+}
+
+.screen-arrow {
+    position: fixed; /* Fixed position for arrows anywhere on the screen */
+    width: 60px;
+    height: 60px;
+    background-color: transparent;
+    z-index: 1200;
+    animation: fadeInOut 1.4s infinite; /* Reintroducing the fade-in, fade-out effect */
+}
+
+.arrow-top-left {
+    top: 20px;
+    left: 20px;
+    transform: rotate(-45deg);
+    border: solid red;
+    border-width: 0 6px 6px 0;
+    padding: 10px;
+}
+
+.arrow-top-right {
+    top: 20px;
+    right: 20px;
+    transform: rotate(45deg);
+    border: solid red;
+    border-width: 0 6px 6px 0;
+    padding: 10px;
+}
+
+.arrow-bottom-left {
+    bottom: 20px;
+    left: 20px;
+    transform: rotate(-135deg);
+    border: solid red;
+    border-width: 0 6px 6px 0;
+    padding: 10px;
+}
+
+.arrow-bottom-right {
+    bottom: 20px;
+    right: 20px;
+    transform: rotate(135deg);
+    border: solid red;
+    border-width: 0 6px 6px 0;
+    padding: 10px;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+h2, h3 {
+    margin-top: 20px;
+}
+
+p, ul {
+    margin-bottom: 20px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+.navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.navigation-button {
+    background-color: #3B82F6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.navigation-button:disabled {
+    background-color: #B0BEC5;
+    cursor: not-allowed;
+}
+
+.navigation-button:hover:not(:disabled) {
+    background-color: #2563EB;
+}

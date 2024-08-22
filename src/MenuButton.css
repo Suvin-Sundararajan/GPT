@@ -1,0 +1,39 @@
+.menu-button {
+    display: flex;
+    align-items: center;
+    border: 2px solid;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    background-color: white;
+    font-size: 12px;
+    width: 100%;
+}
+
+.menu-button:hover {
+    transform: scale(1.05);
+}
+
+.menu-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    font-size: 10px;
+    color: white;
+}
+
+.menu-content {
+    flex: 1;
+}
+
+.menu-title {
+    font-size: 1.2em;
+    margin: 0;
+}
